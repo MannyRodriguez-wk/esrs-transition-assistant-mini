@@ -4,8 +4,8 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 
 - **Agent name:** esrs-transition-assistant-mini (AI-panel)
 - **Repo / product name:** `esrs-transition-assistant-mini`
-- **Prompt version:** 3 (`VERSION`)
-- **Model:** `claude_46_sonnet` (temperature 0.1, top_p 1, `thinking: false`)
+- **Prompt version:** 9 (`VERSION`)
+- **Model:** `claude_46_opus` (temperature 1.0, top_p 1.0, `thinking: true`)
 
 ## Files
 
@@ -20,7 +20,11 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 
 ## Walkthrough
 
-Customer opens the Action Sheet side panel and sends something like “lets go”. Mini checks write access, builds the table outline, then asks **only** for a start row (no Column S vs T gate).
+Customer opens the Action Sheet side panel. Mini checks write access and outline. Wrong file → Marketplace lock string. On the Action Sheet it asks (verbatim):
+
+I'll review the Decision column of the Action Sheet, 50 rows at a time. The Action Sheet has [Y] rows of data, starting with row 4. Which row should I start with?
+
+Approval question (verbatim): **Update the Action Sheet with these suggested decisions?** Buttons: **Yes** | **No** | **Review again**.
 
 ![Start row](docs/screenshots/v2-start-row.png)
 
@@ -30,7 +34,7 @@ After they pick a row (here: 54), Mini reads H/S then D–R, applies the trigger
 
 ![Sheet after S write — T/U untouched](docs/screenshots/v2-sheet-s-written-t-untouched.png)
 
-The assistant should stop at `Write this batch?` (Approve / Hold / Review). It still sometimes dumps a SAFE/null write array in chat; that is not required.
+The assistant should stop at `Update the Action Sheet with these suggested decisions?` (Yes / No / Review again).
 
 ![Approve then write array chatter](docs/screenshots/v2-approve-write-array.png)
 
