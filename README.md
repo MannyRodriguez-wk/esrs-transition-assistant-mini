@@ -4,7 +4,7 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 
 - **Agent name:** esrs-transition-assistant-mini (AI-panel)
 - **Repo / product name:** `esrs-transition-assistant-mini`
-- **Prompt version:** 2 (`VERSION`)
+- **Prompt version:** 3 (`VERSION`)
 - **Model:** `claude_46_sonnet` (temperature 0.1, top_p 1, `thinking: false`)
 
 ## Files
