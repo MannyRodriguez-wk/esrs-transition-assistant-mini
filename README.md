@@ -15,6 +15,7 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 | `spec.yaml` | Spec-only AgentConfig |
 | `helm/agentconfig.yaml` | Full Helm `AgentConfig` CR |
 | `docs/knowledge-base.md` | How `revised_esrs_knowledge_base` is used |
+| `docs/qa-and-objections.md` | In-batch Review Qs, metric-name refusals, general ESRS Q |
 | `docs/screenshots/` | Run captures |
 
 ## Walkthrough
@@ -34,6 +35,12 @@ The assistant should stop at `Write this batch?` (Approve / Hold / Review). It s
 ![Approve then write array chatter](docs/screenshots/v2-approve-write-array.png)
 
 Then one platform **confirmed** write. Cursor advances; next cycle starts silently from Step 4.
+
+## Questions and objections
+
+Customers can push back on a row at `Write this batch?` (e.g. “explain the discrete?” on row 108) or ask Mini to draft metric names. Mini should explain S, refuse T/U naming, and not write until Approve. Full captures: [Questions and objections](docs/qa-and-objections.md).
+
+**General ESRS questions work at the start of a new session.** The same question **mid row-scan hangs** (infinite loading). Use a fresh chat for team/briefing Qs; keep in-batch chat to S decisions only.
 
 ## Workflow (short)
 
