@@ -2,7 +2,7 @@
 
 Workiva Assistant **single-agent** config for staging ESRS Action Sheet columns **S** and **T**. No subagents.
 
-- **Agent name:** ESRS Transition Accelerator v2.0 (side-panel)
+- **Agent name:** esrs-transition-assistant-mini (AI-panel)
 - **Repo / product name:** `esrs-transition-assistant-mini`
 - **Prompt version:** 21 (`VERSION`)
 - **Model:** `claude_46_sonnet` (temperature 0.1, top_p 1, `thinking: false`)
