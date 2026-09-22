@@ -1,10 +1,10 @@
 # ESRS Transition Assistant Mini
 
-Workiva Assistant **single-agent** config for staging ESRS Action Sheet columns **S** and **T**. No subagents.
+Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column S** only. Customers name their own metrics in T/U. No subagents.
 
 - **Agent name:** esrs-transition-assistant-mini (AI-panel)
 - **Repo / product name:** `esrs-transition-assistant-mini`
-- **Prompt version:** 21 (`VERSION`)
+- **Prompt version:** 2 (`VERSION`)
 - **Model:** `claude_46_sonnet` (temperature 0.1, top_p 1, `thinking: false`)
 
 ## Files
@@ -14,24 +14,15 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet columns 
 | `system-prompt.md` | Paste-ready system prompt |
 | `spec.yaml` | Spec-only AgentConfig (`single_agent_config`) |
 | `helm/agentconfig.yaml` | Full Helm `AgentConfig` CR (`ai.workiva.net/v1alpha1`) |
-| `docs/screenshots/` | Opening-gate UI captures |
-
-Gate 1 (Column S vs T):
-
-![Gate 1](docs/screenshots/gate-1-column-s-or-t.png)
-
-Gate 2 (start row):
-
-![Gate 2](docs/screenshots/gate-2-start-row.png)
+| `docs/screenshots/` | Opening UI captures |
 
 ## Workflow
 
-1. Gate: Column S vs Column T  
-2. Gate: start row  
-3. Silent read/decide  
-4. One `Row \| Decision` (or `Row \| Metric name`) table  
-5. `Write this batch?` — Approve / Hold / Review  
-6. One `docplat_write_cell_data` call  
+1. Start row  
+2. Silent read/decide  
+3. One `Row | Decision` table  
+4. `Write this batch?` — Approve / Hold / Review  
+5. One `docplat_write_cell_data` call on Column S only  
 
 ## Tools
 
