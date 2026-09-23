@@ -17,6 +17,8 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 | `docs/knowledge-base.md` | How `revised_esrs_knowledge_base` is used |
 | `docs/qa-and-objections.md` | In-batch Review Qs, metric-name refusals, general ESRS Q |
 | `docs/screenshots/` | Run captures |
+| `docs/alan-v8-system-prompt.md` | Alan v8 prompt (baseline for copy delta) |
+| `docs/alan-v8-vs-v9.diff` | Unified diff: Alan v8 → v9 locked copy only |
 
 ## Walkthrough
 
