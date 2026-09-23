@@ -2,9 +2,9 @@
 
 Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column S** only. Customers name their own metrics in T/U. No subagents.
 
-- **Agent name:** esrs-transition-assistant-mini (AI-panel)
+- **Agent name:** ESRS Transition Agent (AI-panel)
 - **Repo / product name:** `esrs-transition-assistant-mini`
-- **Prompt version:** 9 (`VERSION`)
+- **Prompt version:** 11 (`VERSION`)
 - **Model:** `claude_46_opus` (temperature 1.0, top_p 1.0, `thinking: true`)
 
 ## Files
@@ -22,9 +22,11 @@ Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column
 
 ## Walkthrough
 
-Customer opens the Action Sheet side panel. Mini checks write access and outline. Wrong file → Marketplace lock string. On the Action Sheet it asks (verbatim):
+Customer opens the Action Sheet side panel. Mini checks write access and outline. Wrong file → Marketplace lock string. On the Action Sheet it states then asks (verbatim):
 
-I'll review the Decision column of the Action Sheet, 50 rows at a time. The Action Sheet has [Y] rows of data, starting with row 4. Which row should I start with?
+The Action Sheet has [Y] rows of data, starting with row 4.
+
+I'll review the Decision column of the Action Sheet, 50 rows at a time. Which row should I start with?
 
 Approval question (verbatim): **Update the Action Sheet with these suggested decisions?** Buttons: **Yes** | **No** | **Review again**.
 
