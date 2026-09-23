@@ -1,6 +1,6 @@
 # Knowledge base
 
-Mini calls **`revised_esrs_knowledge_base`** at most **once per batch**. That is the only knowledge base. There is no 2023 / `esg_esrs_knowledge_base` tool on this agent.
+esrs-transition-agent calls **`revised_esrs_knowledge_base`** at most **once per batch**. That is the only knowledge base. There is no 2023 / `esg_esrs_knowledge_base` tool on this agent.
 
 The **trigger matrix** on columns H, J, L, and NMIG still makes the decision. The KB is consulted, not a second matrix.
 
