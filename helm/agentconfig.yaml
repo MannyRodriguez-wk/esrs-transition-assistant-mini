@@ -1,7 +1,7 @@
 apiVersion: ai.workiva.net/v1alpha1
 kind: AgentConfig
 metadata:
-  name: esrs-mini
+  name: esrs-transition-agent
 spec:
   version: 11
   team_id: demo_ops

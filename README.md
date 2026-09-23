@@ -3,7 +3,7 @@
 Workiva Assistant **single-agent** config for staging ESRS Action Sheet **Column S** only. Customers name their own metrics in T/U. No subagents.
 
 - **Agent name:** esrs-transition-agent (AI-panel)
-- **GitHub repo:** `esrs-transition-assistant-mini`
+- **GitHub repo:** `esrs-transition-agent` (the earlier 3-agent v33 repo is now `esrs-transition-agent-old`)
 - **Prompt version:** 11 (`VERSION`)
 - **Model:** `claude_46_opus` (temperature 1.0, top_p 1.0, `thinking: true`)
 
